@@ -14,7 +14,8 @@
     "apollo-link-http": "^1.5.14",
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
-    "vue-apollo": "^3.0.0-beta.11"
+    "vue-apollo": "^3.0.0-beta.11",
+    "vue-router": "^3.0.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",

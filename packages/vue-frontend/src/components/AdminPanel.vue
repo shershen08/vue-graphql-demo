@@ -1,12 +1,15 @@
 <template>
   <div class="hello">
-    <Item v-for="(details, index) in courses" :details="details" :key="index"></Item>
+    <button>Add new book</button>
+    <AdminForm></AdminForm>
+    <AdminItem v-for="(details, index) in courses" @change="onChange" :details="details" :key="index"></AdminItem>
   </div>
 </template>
 
 <script>
 import gql from 'graphql-tag'
-import Item from './Item'
+import AdminItem from './AdminItem'
+import AdminForm from './AdminForm'
 
 export default {
   name: 'AdminPanel',
@@ -17,6 +20,11 @@ export default {
   data() {
     return {
       courses: [],
+    }
+  },
+  methods: {
+    onChange(){
+
     }
   },
    apollo: {
@@ -33,7 +41,8 @@ export default {
     },
   },
   components: {
-    Item
+    AdminItem,
+    AdminForm
   }
 }
 </script>
