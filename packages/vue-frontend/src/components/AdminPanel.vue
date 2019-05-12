@@ -1,14 +1,15 @@
 <template>
   <div class="hello">
-    <!-- <h1>{{ msg }}</h1> -->
-    {{courses}}
+    <Item v-for="(details, index) in courses" :details="details" :key="index"></Item>
   </div>
 </template>
 
 <script>
 import gql from 'graphql-tag'
+import Item from './Item'
+
 export default {
-  name: 'HelloWorld',
+  name: 'AdminPanel',
   props: {
     msg: String,
    
@@ -31,6 +32,9 @@ export default {
       // add custome methods
     },
   },
+  components: {
+    Item
+  }
 }
 </script>
 

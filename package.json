@@ -1,0 +1,10 @@
+{
+	"devDependencies": {
+		"lerna": "^2.11.0"
+	},
+	"scripts": {
+		"install": "lerna bootstrap",
+		"start": "lerna run --parallel start",
+		"dev": "lerna run --parallel dev"
+	}
+}
